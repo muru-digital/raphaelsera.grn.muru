@@ -8,7 +8,8 @@ import { BiArch, BiSolidArch } from "react-icons/bi";
 import { GrArchlinux } from "react-icons/gr";
 
 // ─── CONSTANTS ─────────────────────────────────────────────────────────────────
-const WEDDING_DATE = new Date("2026-04-30T08:00:00");
+const WEDDING_DATE = new Date("2026-07-17T08:00:00");
+const akad_date = "Sabtu, 17 Juli 2025"
 
 const GROOM = {
   initial: "R",
@@ -217,7 +218,7 @@ const HeroSection = () => (
         <h2 className="text-white text-[32px] sm:text-6xl font-flowmery">Seraphina</h2>
       </div>
 
-      <p className="text-yellow-400/50 text-xs sm:text-sm tracking-widest mt-1 sm:mt-9 lg:mt-9">Sabtu, 30 April 2026</p>
+      <p className="text-yellow-400/50 text-xs sm:text-sm tracking-widest mt-1 sm:mt-9 lg:mt-9">{akad_date}</p>
 
       <div className="mt-12 mb-24 sm:mt-14 lg:mt-8 lg:mb-16">
         <GoldDivider />
@@ -318,6 +319,7 @@ const CountUnit = ({ value, label }) => (
 
 const SaveTheDateSection = () => {
   const { days, hours, minutes, seconds } = useCountdown(WEDDING_DATE);
+
   const calUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=Pernikahan+Raphael+%26+Seraphina&dates=20260430T010000Z/20260430T060000Z&details=Akad+Nikah+%26+Resepsi&location=Taciro+Grand+Ballroom`;
 
   return (
@@ -366,7 +368,7 @@ const WeddingDaySection = () => (
         <GoldDivider />
       </div>
 
-      <h3 className="text-white font-serif mb-12 text-2xl">Sabtu, 30 April 2026</h3>
+      <h3 className="text-white font-serif mb-12 text-2xl">{akad_date}</h3>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-12">
         <div className="border border-yellow-700/30 p-6 sm:p-8 text-center">
@@ -375,7 +377,7 @@ const WeddingDaySection = () => (
           <p className="text-yellow-100/50 text-xs sm:text-sm">08:00 - Selesai</p>
         </div>
         <div className="border border-yellow-700/30 p-6 sm:p-8 text-center">
-          <div className="flex justify-center mb-3"><img src="/grn.png" alt="" className=" w-8" /></div>
+          <div className="flex justify-center mb-3"><img src="grn.png" alt="" className=" w-8" /></div>
 
           {/* <GiLoveMystery className="mx-auto text-3xl" /> */}
           <h4 className="text-yellow-400 font-flowmery text-lg sm:text-xl mb-3">Resepsi</h4>
@@ -477,7 +479,7 @@ const FooterSection = () => (
       </div>
 
       <p className="text-yellow-100/60 text-3xl font-flowmery mb-4">Raphael & Seraphina</p>
-      <p className="text-yellow-100/30 text-xs mb-10">Sabtu, 16 April 2026</p>
+      <p className="text-yellow-100/30 text-xs mb-10">{akad_date}</p>
 
       <div className="h-px w-10 mx-auto mb-4" style={{ background: "rgba(184,149,42,0.35)" }} />
 
